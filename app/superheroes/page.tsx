@@ -4,15 +4,16 @@ import axios from "axios";
 import type { AxiosResponse, AxiosError } from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { NextPage } from "next";
-import { useState, Fragment } from "react";
+import { useState } from "react";
+import Link from "next/link";
 
-type Hero = {
+export type Hero = {
   id: number;
   name: string;
   alterEgo: string;
 };
 
-type ServerError = {
+export type ServerError = {
   message: string;
 };
 
@@ -21,7 +22,7 @@ const fetchHeroes = () => axios.get("http://localhost:4000/superheroes");
 const Page: NextPage = () => {
   const [intervalTime, setIntervalTime] = useState<number | false>(3000);
 
-  const { data, isLoading, isError, error, refetch, isSuccess } = useQuery<
+  const { data, isLoading, isError, error, refetch } = useQuery<
     AxiosResponse<Hero[]>,
     AxiosError<ServerError>
   >({
@@ -30,7 +31,7 @@ const Page: NextPage = () => {
     refetchInterval: intervalTime,
   });
 
-  if (isSuccess && data.data.length > 3 && intervalTime !== false) {
+  if (data && data?.data.length > 3 && intervalTime !== false) {
     setIntervalTime(false);
   }
 
@@ -41,7 +42,11 @@ const Page: NextPage = () => {
     <main>
       <h1>Superheroes</h1>
       {data.data.map((hero) => {
-        return <p key={hero.name}>{hero.name}</p>;
+        return (
+          <Link key={hero.name} href={`/superheroes/${hero.id}`}>
+            <p>{hero.name}</p>
+          </Link>
+        );
       })}
       <button
         className="rounded-md bg-black px-[2px] py-[1px] text-white transition-all hover:bg-opacity-80"

@@ -14,11 +14,20 @@
       "id": 3,
       "name": "Doctor Strange",
       "alterEgo": "Stephen Strange"
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Ned"
     },
     {
-      "id": 4,
-      "name": "Ant-Man",
-      "alterEgo": "Scott Lang"
+      "id": 2,
+      "name": "Rhodes"
+    },
+    {
+      "id": 3,
+      "name": "Wong"
     }
   ]
 }
