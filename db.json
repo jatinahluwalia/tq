@@ -29,5 +29,17 @@
       "id": 3,
       "name": "Wong"
     }
+  ],
+  "users": [
+    {
+      "id": "jatin.ahluwalia.5@gmail.com",
+      "channelId": "jitu2404"
+    }
+  ],
+  "channels": [
+    {
+      "id": "jitu2404",
+      "name": "Jitu"
+    }
   ]
 }
