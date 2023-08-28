@@ -4,7 +4,7 @@ This is a [Next.js](https://nextjs.org/) project in which use of [Tanstack React
 
 I have choosen to use follwing stack for this project:
 
- - `[pnpm`](https://www.npmjs.com/package/pnpm/v/7.30.0-0) for managing packages.
+ - [`pnpm`](https://www.npmjs.com/package/pnpm/v/7.30.0-0) for managing packages.
  - [`Next.js`](https://nextjs.org/) for setting up the react project.
  - [`Tanstack React Query`](https://www.npmjs.com/package/@tanstack/react-query) for handling async context.
 
