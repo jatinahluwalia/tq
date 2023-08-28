@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { useQuery } from "@tanstack/react-query";
-import { Hero, ServerError } from "@/app/superheroes/page";
+import { Hero, ServerError } from "@/types";
 
 type Id = number | string | string[];
 

@@ -6,16 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 import { NextPage } from "next";
 import { useState } from "react";
 import Link from "next/link";
-
-export type Hero = {
-  id: number;
-  name: string;
-  alterEgo: string;
-};
-
-export type ServerError = {
-  message: string;
-};
+import { Hero, ServerError } from "@/types";
 
 const fetchHeroes = () => axios.get("http://localhost:4000/superheroes");
 
