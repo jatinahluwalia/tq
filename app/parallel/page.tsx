@@ -1,3 +1,5 @@
+"use client"
+
 import { NextPage } from "next";
 import axios, { AxiosError, AxiosResponse } from "axios";
 import { useQuery } from "@tanstack/react-query";
