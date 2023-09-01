@@ -7,7 +7,7 @@ import React from "react";
 
 const Page: NextPage = () => {
   const { superhero } = useParams();
-  const { data } = useID(superhero);
+  const { data } = useID(String(superhero));
 
   return <div>{data?.data.name}</div>;
 };
